@@ -1,0 +1,14 @@
+package com.mf.app.mi_cv_spring_boot.MiCv.model;
+
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+public class CvData {
+    private PersonalDetails personalDetails;
+    private List<Education> educations;
+    private List<Experience> experiences;
+    private List<Skill> skills;
+
+}
