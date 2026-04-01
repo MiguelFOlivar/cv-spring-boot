@@ -15,6 +15,11 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class LandingController {
     private final CvInitializationService cvInitializationService;
 
+    @GetMapping("/")
+    public String redirectToForm(){
+        return "redirect:/cv-form";
+    }
+
     @GetMapping("cv-form")
     public String showForm(Model model){
         CvData cvData = cvInitializationService.initializeCvData();
